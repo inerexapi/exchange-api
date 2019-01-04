@@ -1,7 +1,7 @@
 const rp = require('request-promise-native');
 const md5 = require('js-md5');
 
-const MARKET_URL = "http://192.168.1.248:3012/"           // Market Url
+const MARKET_URL = ""           // Market Url
 const HEADER_DICT = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko",
     "Content-Type": "application/json;charset=utf-8",
