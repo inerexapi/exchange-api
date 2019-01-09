@@ -52,7 +52,7 @@ const api = require("./api.js");
     "type": "BUY",
     "symbol": "REX_ETH",
 }
-api.postOrderPlace(config).then(res => { console.log(res, '\n') }); */
+api.placeOrder(config).then(res => { console.log(res, '\n') }); */
 /* {
     "status":"ok",
     "timestamp":1537882992676,
@@ -66,7 +66,7 @@ api.postOrderPlace(config).then(res => { console.log(res, '\n') }); */
     "secret": "xxx",
     "symbol": "REX_ETH"
 }
-api.postOpenOrders(config).then(res => { console.log(res, '\n') });
+api.getOpenOrders(config).then(res => { console.log(res, '\n') });
 {
     "status":"ok",
     "orders":[
@@ -107,7 +107,7 @@ api.postOpenOrders(config).then(res => { console.log(res, '\n') });
     "order_id": "22",
     "type": "BUY"
 }
-api.postCancel(config).then(res => { console.log(res, '\n') });
+api.CancelOrder(config).then(res => { console.log(res, '\n') });
 {
     "status":"ok",
     "timestamp":1537883532195,
@@ -139,7 +139,7 @@ api.postCancel(config).then(res => { console.log(res, '\n') });
     "secret": "xxx",
     "currency": "BCH"
 }
-api.postBalance(config).then(res => { console.log(res, '\n') });
+api.getBalance(config).then(res => { console.log(res, '\n') });
 {
     "status": "ok",
     "timestamp": 1538048795543,
@@ -158,7 +158,7 @@ api.postBalance(config).then(res => { console.log(res, '\n') });
     "order_id": 12,
     "type": "BUY"
 }
-api.postInfo(config).then(res => { console.log(res, '\n') });
+api.getOrderInfo(config).then(res => { console.log(res, '\n') });
 {
     "status":"ok",
     "timestamp":1537883934304,
