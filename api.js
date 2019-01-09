@@ -25,7 +25,7 @@ function getTicker(symbol) {
 }
 
 /**
- * Get pending order
+ * Get order detail
  * @param {string} symbol - Required, for all or transaction pair code: BCH_BTC
  */
 function getOrderbook(symbol) {
@@ -55,7 +55,7 @@ function getTrade(symbol, size = 300) {
  * @param {string|number} config.currency
  * 
  */
-function postBalance(config) {
+function getBalance(config) {
     url = TRADE_URL + "get-balance"
     return httpPostSign(url, config)
 }
@@ -76,7 +76,7 @@ function postBalance(config) {
  * @param {string|number} config.qty
  * @param {string|number} config.symbol
  */
-function postOrderPlace(config) {
+function placeOrder(config) {
     url = TRADE_URL + "create-order"
     return httpPostSign(url, config)
 }
@@ -95,7 +95,7 @@ function postOrderPlace(config) {
  * @param {string} config.type
  * 
  */
-function postInfo(config) {
+function getOrderInfo(config) {
     url = TRADE_URL + "order-info"
     return httpPostSign(url, config)
 }
@@ -113,7 +113,7 @@ function postInfo(config) {
  * @param {string} config.symbol
  * 
  */
-function postOpenOrders(config) {
+function getOpenOrders(config) {
     url = TRADE_URL + "open-orders"
     return httpPostSign(url, config)
 }
@@ -132,7 +132,7 @@ function postOpenOrders(config) {
  * @param {string} config.type
  * 
  */
-function postCancel(config) {
+function CancelOrder(config) {
     url = TRADE_URL + "cancel-order"
     return httpPostSign(url, config)
 }
@@ -141,8 +141,8 @@ exports.getOrderbook = getOrderbook;
 exports.getSymbol = getSymbol;
 exports.getTicker = getTicker;
 exports.getTrade = getTrade;
-exports.postBalance = postBalance;
-exports.postInfo = postInfo;
-exports.postOpenOrders = postOpenOrders;
-exports.postOrderPlace = postOrderPlace;
-exports.postCancel = postCancel;
+exports.getBalance = getBalance;
+exports.getOrderInfo = getOrderInfo;
+exports.getOpenOrders = getOpenOrders;
+exports.placeOrder = placeOrder;
+exports.CancelOrder = CancelOrder;
